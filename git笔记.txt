@@ -1,0 +1,25 @@
+git（rm -rf .git强制脱离管理并删除所有历史）：
+	分为三个区，工作区，暂存区（变绿），版本区（执行git commit --m 'XXXX'生成版本)
+1
+git init(初始化让git管理文件夹 ）
+git add 文件名或 ”.“（将工作区文件保存至暂存区”.“选中全部）
+git commit --m 'xxxx'（将工作区文件提交至版本区）
+回滚之前的版本
+git log(可以查看之前提交的版本区）
+git reset --hard 版本号
+回滚之后的版本
+git reflog（查看之后的版本）
+git reset --hard 版本号（回滚至版本号对应的版本）
+*
+git status(查看git管理文件的状态）
+git checkout -- 文件名（将修改的文件变为未修改的文件）
+git reset HEAD 文件名（将暂存区文件返回至工作区）
+git分支
+git版本会保存修建和修改过的文件，没改过的文件通过一种指针链接
+只能做到基础的环境隔离，代码隔离，不能算作完全的隔离
+git branch (查看分支）
+git branch 分支名（创建分支）
+git checkout 分支名称（切换分支）
+git merge 要合并的分支名称（想合并到哪个分支就先切换到哪个分支，并且有可能会出现冲突，手动处理冲突commit）
+git branch -d 分支名称（删除分支）
+git工作流：建议写代码在dev分支
