@@ -23,3 +23,14 @@ git checkout 分支名称（切换分支）
 git merge 要合并的分支名称（想合并到哪个分支就先切换到哪个分支，并且有可能会出现冲突，手动处理冲突commit）
 git branch -d 分支名称（删除分支）
 git工作流：建议写代码在dev分支
+git远程上传github
+git remote add origin->这是仓库别名可以随便起名 github库的地址
+git push -u origin 分支(已有文件进行操作）第一次-u必写，后续可以不写
+从GitHub上拉取代码
+git clone github仓库地址，只一次复制
+会将所有分支clone下来只是看不见可以直接checkout切换
+切换至dev进行开发git checkout dev
+得合并一下最新的master
+git pull origin 分支（第一次clone一次后更新代码）
+在dev开发完需要上线，将dev合并到master推送上线
+推送dev也是最新，merge master后dev也最新
